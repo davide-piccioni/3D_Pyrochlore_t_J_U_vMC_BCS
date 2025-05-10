@@ -10,7 +10,7 @@ This repository contains a variational quantum Monte Carlo (vQMC) code for simul
 
 The trial wave function for a system with ***L*** lattice sites and ***N*** up-spin and ***N*** down-spin electrons is based on the Bardeen-Cooper-Schrieffer (BCS) wave function:
 
-![BCS](https://latex.codecogs.com/svg.image?|\psi\rangle=\exp\bigg\{\sum_{i,j}^L&space;f_{ij}\hat{c}^{\dagger}_{i,\uparrow}\hat{c}^{\dagger}_{j,\downarrow}\bigg\}|0\rangle)
+![BCS](https://latex.codecogs.com/svg.image?\left|\psi\right\rangle=\exp\bigg(\sum_{ij}^L&space;f_{ij}\hat{c}^{\dagger}_{i,\uparrow}\hat{c}^{\dagger}_{j,\downarrow}\bigg)\left|0\right\rangle)
 
 where ![c_up](https://latex.codecogs.com/svg.image?$$\hat{c}^{\dagger}_{i,\uparrow}$$) and ![c_do](https://latex.codecogs.com/svg.image?$$\hat{c}^{\dagger}_{i,\downarrow}$$) are creation operators for up-spin and down-spin electrons, respectively, and ![f_ij](https://latex.codecogs.com/svg.image?$$f_{ij}$$) is a matrix of variational parameters.
 
