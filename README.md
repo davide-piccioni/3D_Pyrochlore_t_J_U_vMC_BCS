@@ -8,27 +8,27 @@ This repository contains a variational quantum Monte Carlo (vQMC) code for simul
 
 ### BCS Wave Function
 
-The trial wave function for a system with $L$ lattice sites and $N$ up-spin and $N$ down-spin electrons is based on the Bardeen-Cooper-Schrieffer (BCS) wave function:
+The trial wave function for a system with ***L*** lattice sites and ***N*** up-spin and ***N*** down-spin electrons is based on the Bardeen-Cooper-Schrieffer (BCS) wave function:
 
-$$|\psi\rangle = \exp \left\{ \sum_{i,j}^L f_{ij} \hat{c}^{\dagger}_{i,\uparrow} \hat{c}^{\dagger}_{j,\downarrow} \right\} |0\rangle$$
+![BCS](https://latex.codecogs.com/svg.image?|\psi\rangle=\exp\bigg\{\sum_{i,j}^L&space;f_{ij}\hat{c}^{\dagger}_{i,\uparrow}\hat{c}^{\dagger}_{j,\downarrow}\bigg\}|0\rangle)
 
-where $\hat{c}^{\dagger}_{i,\uparrow}$ and $\hat{c}^{\dagger}_{j,\downarrow}$ are creation operators for up-spin and down-spin electrons, respectively, and $f_{ij}$ is a matrix of variational parameters.
+where ![c_up](https://latex.codecogs.com/svg.image?$$\hat{c}^{\dagger}_{i,\uparrow}$$) and ![c_do](https://latex.codecogs.com/svg.image?$$\hat{c}^{\dagger}_{i,\downarrow}$$) are creation operators for up-spin and down-spin electrons, respectively, and ![f_ij](https://latex.codecogs.com/svg.image?$$f_{ij}$$) is a matrix of variational parameters.
 
 Each many-body configuration visited during the vMC sampling will be of the form:
 
-$$|x\rangle = \hat{c}^{\dagger}_{R_1,\uparrow} \hat{c}^{\dagger}_{R_2,\uparrow} \dots \hat{c}^{\dagger}_{R_N,\uparrow} \hat{c}^{\dagger}_{S_1,\downarrow} \dots \hat{c}^{\dagger}_{S_N,\downarrow} |0\rangle$$
+![configuration](https://latex.codecogs.com/svg.image?|x\rangle=\hat{c}^{\dagger}_{R_1,\uparrow}\hat{c}^{\dagger}_{R_2,\uparrow}\dots\hat{c}^{\dagger}_{R_N,\uparrow}\hat{c}^{\dagger}_{S_1,\downarrow}\dots\hat{c}^{\dagger}_{S_N,\downarrow}|0\rangle)
 
-where $R_p$ and $S_p$ represents the sites occupied by the up and down electrons respectively.
+where ![R_p](https://latex.codecogs.com/svg.image?R_p) and ![S_p](https://latex.codecogs.com/svg.image?S_p) represents the sites occupied by the up and down electrons respectively.
 
 For each configuration of this kind, the amplitude of the wave function is given by:
 
-$$\langle x | \psi \rangle = \det f_{R_i, S_j}$$
+![determinant](https://latex.codecogs.com/svg.image?$$\langle&space;x|\psi\rangle=\det&space;\big[f_{R_i,S_j}\big]$$)
 
-where $f_{R_i, S_j}$ is the submatrix of $f_{ij}$ obtained by taking rows $R_i$ and columns $S_j$.
+where ![f_RiRj](https://latex.codecogs.com/svg.image?$$f_{R_iR_j}$$)  is the submatrix of   ![f_ij](https://latex.codecogs.com/svg.image?$$f_{ij}$$)  obtained by taking rows ![R_i](https://latex.codecogs.com/svg.image?R_i) and columns ![S_j](https://latex.codecogs.com/svg.image?S_j) .
 
 ### Fast Update Method
 
-This implementation uses a fast-update scheme to efficiently compute wave function ratios between successive Monte Carlo configurations. Instead of recalculating the determinant (an $O(L^3)$ operation), we compute and maintain the inverse of the $f_{R_i, S_j}$ matrix, updating it incrementally as electron positions change during the Markov chain.
+This implementation uses a fast-update scheme to efficiently compute wave function ratios between successive Monte Carlo configurations. Instead of recalculating the determinant (an ![OL3](https://latex.codecogs.com/svg.image?O(L^3)) operation), we compute and maintain the inverse of the ![f_RiRj](https://latex.codecogs.com/svg.image?$$f_{R_iR_j}$$) matrix, updating it incrementally as electron positions change during the Markov chain.
 
 The update scheme depends on the move type:
 - For hopping moves: rank-1 updates
@@ -36,8 +36,7 @@ The update scheme depends on the move type:
 
 For a deeper understanding of the fast-update scheme and its computational efficiency, please refer to Chapter 5, Section "5.6.2" (Fast Computation of the Determinants) of the book:
 
-\textit{Quantum Monte Carlo Approaches for Correlated Systems} \\
-\url{https://www.cambridge.org/core/books/quantum-monte-carlo-approaches-for-correlated-systems/EB88C86BD9553A0738BDAE400D0B2900}
+[**Quantum Monte Carlo Approaches for Correlated Systems** - Federico Becca, Sandro Sorella](https://www.cambridge.org/core/books/quantum-monte-carlo-approaches-for-correlated-systems/EB88C86BD9553A0738BDAE400D0B2900)
 
 ### Gutzwiller Projector
 
@@ -57,7 +56,7 @@ Core quantum Monte Carlo implementation with the following features:
 - MPI parallelization for distributed computing
 - Stochastic Reconfiguration (SR) optimization of variational parameters
 - Calculation of observables (energy, energy fluctuations, spin correlations)
-    - Support for parameter optimization or fixed-parameter measurements
+ - Support for parameter optimization or fixed-parameter measurements
 
 ### Python Analysis Tools
 
@@ -83,5 +82,5 @@ Core quantum Monte Carlo implementation with the following features:
 
 ### Running Simulations
 
-    ```bash
     mpirun -np [NUMBER_OF_PROCESSES] ./main_SR_lattice [OUTPUT_DIRECTORY]
+
