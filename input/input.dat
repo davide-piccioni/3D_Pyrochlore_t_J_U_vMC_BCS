@@ -1,0 +1,29 @@
+16  16  0.  1.  0.  1.0001
+1  20000  2  32  100  4  0.01  0  0.0001 
+
+N_e_up>>N_e_do>>t_hubb>>J>>U_hubb>>P_SpinFlip
+>>starting_from_previous_params>>N>>M>>nsparse_ave>>N_therm>>N_scra>>gamma>>n_iterations_SR>>epsilon_SR;
+
+// Give to the program: 
+//
+// N_e_up (# of electrons with spin up), 
+// N_e_do (# of electrons with spin down), 
+// t_hubb (t - hopping parameter),
+// J (exchange term J),
+// U_hubb (U - Hubbard interaction parameter),
+// P_SpinFlip (The probability of choosing to try to perform a hopping is 1. - P_SPIN_FLIP),
+//
+// starting_from_previous_params (if true, try starting the simulation from the last saved parameters)
+// N (# of total steps in unit of nsparse_ave for each walker), 
+// M (# of walkers), 
+// nsparse_ave (number of tried Metropolis steps between two measurements), 
+// N_therm (# of termalization steps in unit of nsparse_ave for each walker), 
+// N_scra (# of steps in unit of nsparse_ave after which the fast-update matrices are recomputed from scratch)
+// gamma (learning rate), 
+// n_iterations_SR (iterations of Stochastic reconfigurations);
+// epsilon_SR (regularization of S-Matrix)
+
+
+
+
+0  60000  2  48  20000  2  0.005  0  0.0001 

@@ -1,0 +1,18 @@
+Simulating t-J-U model on Pyrocglore Lattice
+L = 32
+N_up = 16, N_do = 16
+
+Physical parameters: 
+t = 0
+U = 0
+J = 1
+
+
+---------------------------
+
+Variational parameters
+# abs_f_ij_NN: 1024
+# phase_f_ij_NN: 1024
+
+
+
