@@ -517,7 +517,7 @@ int main (int argc, char *argv[]){
 
 int read_ivic(ArrayXi & imulti, Eigen::Tensor<int, 3> & ivic){ 
 
-   std::ifstream ivict_file("ivic.dat");
+   std::ifstream ivict_file("include/ivic.dat");
    if (!ivict_file.is_open()) {
      std::cerr << "Unable to open ivic file" << std::endl;
      return 1; // Return an error code	

@@ -264,7 +264,7 @@ void Walker :: initRand(int rank){
    ///////////////////////////////////////
    int seed[4];
    int p1, p2; 
-   ifstream Primes("Primes");
+   ifstream Primes("include/Primes");
    if (Primes.is_open()){
      for(int i=0;i<=rank;i++){             
        Primes >> p1 >> p2 ;
@@ -272,7 +272,7 @@ void Walker :: initRand(int rank){
    } else cerr << "PROBLEM: Unable to open Primes" << endl;
    Primes.close();
 
-   ifstream input("seed.in");
+   ifstream input("include/seed.in");
    string property;
    if (input.is_open()){
      while ( !input.eof() ){

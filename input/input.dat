@@ -1,5 +1,5 @@
 16  16  0.  1.  0.  1.0001
-1  20000  2  32  100  4  0.01  0  0.0001 
+1  8000  2  32  100  4  0.01  10  0.0001 
 
 N_e_up>>N_e_do>>t_hubb>>J>>U_hubb>>P_SpinFlip
 >>starting_from_previous_params>>N>>M>>nsparse_ave>>N_therm>>N_scra>>gamma>>n_iterations_SR>>epsilon_SR;
