@@ -1,8 +1,8 @@
-# vMC for t-J-U Model with BCS wave function on 3D Pyrochlore Lattice
+# vMC for t-J Model with BCS wave function on 3D Pyrochlore Lattice
 
 ## Description
 
-This repository contains a variational quantum Monte Carlo (vQMC) code for simulating and analyzing a t-J-U model on a 3D pyrochlore lattice using variational Monte Carlo methods with stochastic reconfiguration optimization. The implementation uses a BCS-type wave function with complex variational parameters.
+This repository contains a variational quantum Monte Carlo (vQMC) code for simulating and analyzing a t-J model on a 3D pyrochlore lattice using variational Monte Carlo methods with stochastic reconfiguration optimization. The implementation uses a BCS-type wave function with complex variational parameters.
 
 ## Theory Background
 
@@ -46,7 +46,7 @@ A Gutzwiller projector is implemented to eliminate double occupations on lattice
 
 This code can simulate two different models:
 - **Heisenberg Model**: When there are no holes (all sites occupied)
-- **t-J-U Model**: When holes are present in the system
+- **t-J Model**: When holes are present in the system
 
 ## Code Structure
 
